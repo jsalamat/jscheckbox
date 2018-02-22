@@ -15,9 +15,17 @@ function handleCheck(e) {
 	console.log(lastChecked);
 	//check if the shift key down
 	// and check that they are checking the box
+
+	// create inBetween and loop over each checkbox
+	// it will only be true on area that will be check
+	// it will true on first one and then will be false on the lastCheck
+	let inBetween = false;
 	if (e.shiftKey && this.checked) {
-		//loop over the checkbox 
+		// loop over every single checkbox 
 		// and look for first one check then lastCheck
+		checkboxes.forEach(checkbox => {
+			console.log(checkbox);
+		})
 	}
 };
 
