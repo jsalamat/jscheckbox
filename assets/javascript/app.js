@@ -29,6 +29,9 @@ function handleCheck(e) {
 				console.log("Start to check them inbetween!");
 			}
 
+			if(inBetween) {
+				checkbox.checked = true;
+			}
 		});
 	}
 	lastChecked = this;
@@ -39,3 +42,9 @@ function handleCheck(e) {
 // and listen for a click
 // whgit en click to run handleCheck
 checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck))
+
+// inBetween info
+// we set a flag variable inBetween whioch is set to false
+// once hit the first one it will be set to true 
+// and check to see if true and set it to true
+// until we hit the lastChecked and set it to false
