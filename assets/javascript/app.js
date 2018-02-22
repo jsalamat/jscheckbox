@@ -11,8 +11,7 @@ let lastChecked;
 
 function handleCheck(e) {
 	//console.log(e);
-	lastChecked = this;
-	console.log(lastChecked);
+	
 	//check if the shift key down
 	// and check that they are checking the box
 
@@ -25,8 +24,15 @@ function handleCheck(e) {
 		// and look for first one check then lastCheck
 		checkboxes.forEach(checkbox => {
 			console.log(checkbox);
-		})
+			if (checkbox === this || checkbox === lastChecked) {
+				inBetween = !inBetween;
+				console.log("Start to check them inbetween!");
+			}
+
+		});
 	}
+	lastChecked = this;
+	//console.log(lastChecked);
 };
 
 // loop over each checkbox
